@@ -25,10 +25,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 .nav-logo img{height:36px;mix-blend-mode:screen;opacity:0.9;transition:opacity 0.3s;}
 .nav-logo:hover img{opacity:1;}
 .nav-links{display:flex;gap:28px;list-style:none;}
-.nav-links a{font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.26em;color:rgba(242,237,228,0.5);text-transform:uppercase;transition:var(--t);position:relative;padding-bottom:2px;}
+.nav-links a{font-family:'Cinzel',serif;font-size:11px;letter-spacing:0.26em;color:rgba(242,237,228,0.5);text-transform:uppercase;transition:var(--t);position:relative;padding-bottom:2px;}
 .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--oro);transition:width 0.4s;}
 .nav-links a:hover{color:var(--oro);}.nav-links a:hover::after{width:100%;}
-.nav-cta{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:0.32em;text-transform:uppercase;padding:9px 20px;border:1px solid rgba(201,168,76,0.35);color:var(--oro);transition:var(--t);}
+.nav-cta{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:0.32em;text-transform:uppercase;padding:9px 20px;border:1px solid rgba(201,168,76,0.35);color:var(--oro);transition:var(--t);}
 .nav-cta:hover{background:var(--oro);color:#000;}
 .nav-hbg{display:none;flex-direction:column;gap:5px;background:none;border:none;padding:4px;}
 .nav-hbg span{display:block;width:20px;height:1px;background:var(--blanco);transition:var(--t);}
@@ -41,14 +41,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 /* HERO */
 .hero{height:100svh;min-height:580px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#000;}
 .hero-vid{position:absolute;inset:0;overflow:hidden;z-index:0;}
-.hero-vid iframe{position:absolute;top:50%;left:50%;width:200vh;height:115vh;min-width:115%;min-height:64.8vw;transform:translate(-50%,-50%);pointer-events:none;}
-#yt-player{position:absolute;inset:0;}
+.hero-vid iframe{width:100%;height:100%;pointer-events:none;border:0;}
+#yt-player{position:absolute;top:50%;left:50%;width:200vh;height:115vh;min-width:115%;min-height:64.8vw;transform:translate(-50%,-50%);pointer-events:none;}
 .hero-vid-block{position:absolute;inset:0;z-index:2;}
 .hero-ov{position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.32) 55%,rgba(0,0,0,0.78) 100%);z-index:1;}
 .hero-cnt{position:relative;z-index:2;text-align:center;display:flex;flex-direction:column;align-items:center;padding:0 20px;}
 .hero-logo{height:200px;mix-blend-mode:screen;filter:drop-shadow(0 0 28px rgba(201,168,76,0.2));margin-bottom:26px;animation:fu 1.4s cubic-bezier(0.4,0,0.2,1) 0.3s both;}
-.hero-ey{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:0.65em;color:var(--oro);text-transform:uppercase;margin-bottom:18px;animation:fu 1.2s ease 0.7s both;}
-.hero-tg{font-size:clamp(13px,1.4vw,17px);letter-spacing:0.3em;color:rgba(242,237,228,0.68);text-transform:uppercase;animation:fu 1.2s ease 1s both;}
+.hero-ey{font-family:'Cinzel',serif;font-size:11px;letter-spacing:0.65em;color:var(--oro);text-transform:uppercase;margin-bottom:18px;animation:fu 1.2s ease 0.7s both;}
+.hero-tg{font-size:clamp(16px,1.7vw,22px);letter-spacing:0.3em;color:rgba(242,237,228,0.68);text-transform:uppercase;animation:fu 1.2s ease 1s both;}
 .hero-dv{width:1px;height:46px;background:linear-gradient(to bottom,var(--oro),transparent);margin:22px 0;animation:fu 1.2s ease 1.2s both;}
 .hero-sc{font-family:'Cinzel',serif;font-size:7px;letter-spacing:0.65em;color:rgba(201,168,76,0.38);text-transform:uppercase;animation:fu 1.2s ease 1.4s both;}
 .hero-cr span{position:absolute;width:52px;height:52px;border-color:rgba(201,168,76,0.32);border-style:solid;z-index:2;}
@@ -72,7 +72,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 .ey{font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:0.6em;color:var(--oro);text-transform:uppercase;display:block;margin-bottom:14px;}
 .hl{font-family:'Cormorant Garamond',serif;font-weight:300;line-height:1.1;}
 .hl em{color:var(--oro);font-style:italic;}
-.bt{font-size:15px;line-height:1.95;color:var(--texto);}
+.bt{font-size:17px;line-height:1.95;color:var(--texto);}
 .r{opacity:0;transform:translateY(24px);transition:opacity 0.8s cubic-bezier(0.4,0,0.2,1),transform 0.8s cubic-bezier(0.4,0,0.2,1);}
 .r.in{opacity:1;transform:translateY(0);}
 
@@ -129,7 +129,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 .tl-item::before{content:'';position:absolute;left:-4px;top:5px;width:8px;height:8px;border-radius:50%;background:#000;border:1px solid var(--oro);opacity:0.65;}
 .tl-yr{font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:0.28em;color:var(--oro);margin-bottom:7px;}
 .tl-item h3{font-family:'Cormorant Garamond',serif;font-size:21px;font-weight:400;margin-bottom:7px;}
-.tl-item p{font-size:14px;line-height:1.82;color:var(--texto);}
+.tl-item p{font-size:16px;line-height:1.82;color:var(--texto);}
 
 /* CONTINUACIÓN LEGADO */
 .cont-s{background:#000;}
@@ -148,10 +148,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 .telas-s::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,var(--oro),transparent);opacity:0.3;}
 .telas-hdr{text-align:center;margin-bottom:18px;}
 .telas-hdr h2{font-size:clamp(30px,4vw,54px);margin-bottom:12px;}
-.telas-sub{text-align:center;max-width:680px;margin:0 auto 64px;font-size:15.5px;line-height:1.9;color:var(--texto);}
+.telas-sub{text-align:center;max-width:680px;margin:0 auto 64px;font-size:17px;line-height:1.9;color:var(--texto);}
 
 /* CASAS BRANDS GRID */
-.casas-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--dim);border:1px solid var(--dim);margin-bottom:80px;}
+.casas-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--dim);border:1px solid var(--dim);margin-bottom:80px;}
 .casa{background:#000;padding:36px 24px;text-align:center;transition:var(--t);cursor:none;position:relative;}
 .casa::after{content:'';position:absolute;bottom:0;left:50%;width:0;height:2px;background:var(--oro);transition:all 0.5s;transform:translateX(-50%);}
 .casa:hover{background:#070707;}
@@ -161,7 +161,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 .casa-logo svg{max-height:100%;max-width:100%;}
 .casa-origen{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:0.35em;color:var(--oro);text-transform:uppercase;}
 .casa-fundacion{font-size:11px;color:var(--texto);margin-top:4px;font-style:italic;}
-@media(max-width:1100px){.casas-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:1200px){.casas-grid{grid-template-columns:repeat(3,1fr);}}
 @media(max-width:680px){.casas-grid{grid-template-columns:repeat(2,1fr);}}
 
 /* TARJETAS DETALLES */
@@ -174,7 +174,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 .casa-card-año{font-family:'Cinzel',serif;font-size:9px;letter-spacing:0.35em;color:var(--oro);text-transform:uppercase;}
 .casa-card-tag{font-family:'Cinzel',serif;font-size:7px;letter-spacing:0.35em;color:rgba(201,168,76,0.7);text-transform:uppercase;margin-bottom:10px;display:block;}
 .casa-card h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:400;margin-bottom:12px;line-height:1.25;}
-.casa-card-desc{font-size:14px;line-height:1.85;color:var(--texto);margin-bottom:20px;}
+.casa-card-desc{font-size:16px;line-height:1.85;color:var(--texto);margin-bottom:20px;}
 .casa-card-feat{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px;}
 .feat-tag{font-family:'Cinzel',serif;font-size:7px;letter-spacing:0.25em;text-transform:uppercase;padding:5px 10px;border:1px solid var(--dim);color:rgba(242,237,228,0.6);}
 .feat-tag.gold{border-color:rgba(201,168,76,0.4);color:var(--oro-s);}
@@ -512,6 +512,11 @@ footer{padding:52px 48px 24px;border-top:1px solid var(--dim);background:#000;}
       <div class="casa-origen">Francia / Reino Unido</div>
       <div class="casa-fundacion">Desde 1842</div>
     </div>
+    <div class="casa" onclick="openModal('m-vitale')">
+      <div class="casa-logo"><svg viewBox="0 0 240 70" xmlns="http://www.w3.org/2000/svg"><text x="120" y="22" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic" fill="currentColor" letter-spacing="2" opacity="0.7">VITALE</text><text x="120" y="44" text-anchor="middle" font-family="Cinzel, serif" font-size="17" font-weight="900" fill="currentColor" letter-spacing="4">BARBERIS</text><text x="120" y="60" text-anchor="middle" font-family="Cinzel, serif" font-size="9" font-weight="600" fill="currentColor" letter-spacing="6">CANONICO</text></svg></div>
+      <div class="casa-origen">Italia</div>
+      <div class="casa-fundacion">Desde 1663</div>
+    </div>
   </div>
 
   <!-- TARJETAS RESUMEN -->
@@ -595,6 +600,22 @@ footer{padding:52px 48px 24px;border-top:1px solid var(--dim);background:#000;}
         <span class="feat-tag">Tonik · Sportex</span>
       </div>
       <button class="casa-card-btn" onclick="openModal('m-dormeuil')">Leer más →</button>
+    </div>
+
+    <div class="casa-card r" style="transition-delay:0.36s;">
+      <div class="casa-card-hdr">
+        <div class="casa-card-logo"><svg viewBox="0 0 240 70" xmlns="http://www.w3.org/2000/svg"><text x="120" y="20" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="10" font-style="italic" fill="currentColor" letter-spacing="2" opacity="0.7">VITALE</text><text x="120" y="42" text-anchor="middle" font-family="Cinzel, serif" font-size="16" font-weight="900" fill="currentColor" letter-spacing="4">BARBERIS</text><text x="120" y="58" text-anchor="middle" font-family="Cinzel, serif" font-size="8" font-weight="600" fill="currentColor" letter-spacing="6">CANONICO</text></svg></div>
+        <div class="casa-card-año">Trivero · Italia · 1663</div>
+      </div>
+      <span class="casa-card-tag">El Tejido más Antiguo del Mundo</span>
+      <h3>Vitale Barberis Canonico — 360 años de lana pura italiana</h3>
+      <p class="casa-card-desc">Fundada en 1663 en Trivero, Italia, es el lanificio más antiguo del mundo en operación continua. Sus telas en lana pura y merino son referente absoluto de la alta sastrería italiana: equilibrio perfecto entre tradición artesanal e innovación técnica.</p>
+      <div class="casa-card-feat">
+        <span class="feat-tag gold">Lanificio desde 1663</span>
+        <span class="feat-tag">Merino extra-fine</span>
+        <span class="feat-tag">Lana pura italiana</span>
+      </div>
+      <button class="casa-card-btn" onclick="openModal('m-vitale')">Leer más →</button>
     </div>
 
     <div class="casa-card r" style="transition-delay:0.4s;background:linear-gradient(135deg,#0a0a0a,#000);">
@@ -777,6 +798,34 @@ footer{padding:52px 48px 24px;border-top:1px solid var(--dim);background:#000;}
         <li><strong>Exel</strong> — lana con elasticidad natural</li>
       </ul>
       <p>Dormeuil representa el equilibrio perfecto entre tradición y vanguardia. Una elección para quienes valoran el legado pero exigen prestaciones modernas.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="m-vitale">
+  <div class="modal-bx">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-hero">
+      <div class="modal-logo"><svg viewBox="0 0 260 75" xmlns="http://www.w3.org/2000/svg"><text x="130" y="22" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="12" font-style="italic" fill="currentColor" letter-spacing="3" opacity="0.7">VITALE</text><text x="130" y="48" text-anchor="middle" font-family="Cinzel, serif" font-size="20" font-weight="900" fill="currentColor" letter-spacing="5">BARBERIS</text><text x="130" y="66" text-anchor="middle" font-family="Cinzel, serif" font-size="10" font-weight="600" fill="currentColor" letter-spacing="7">CANONICO</text></svg></div>
+      <div class="modal-meta">
+        <span>Trivero · Italia</span>
+        <span>Fundada en 1663</span>
+        <span>El Lanificio más Antiguo</span>
+      </div>
+      <h2 class="hl">Vitale Barberis Canonico — <em>360 años</em> tejiendo la excelencia italiana</h2>
+    </div>
+    <div class="modal-body">
+      <p>En <strong>1663, en la colina de Trivero</strong>, en el corazón de la región lanera de Biella, Italia, nació el linaje textil más longevo del mundo. Vitale Barberis Canonico lleva más de tres siglos y medio produciendo telas que definen el estándar de la sastrería de lujo internacional.</p>
+      <p>La familia Barberis Canonico ha mantenido la propiedad y dirección del lanificio de manera ininterrumpida a lo largo de <strong>15 generaciones</strong>. Esta continuidad única en el mundo permite preservar secretos técnicos y tradiciones artesanales que ninguna otra casa textil posee.</p>
+      <h4>Especialidades</h4>
+      <ul>
+        <li><strong>Merino Extra-Fine</strong> — fibras seleccionadas de las mejores granjas australianas y neozelandesas</li>
+        <li><strong>Super 120's a Super 180's</strong> — hilos de finura excepcional hilados en sus telares centenarios</li>
+        <li><strong>Colecciones Stagionale</strong> — telas adaptadas a cada estación con ingeniería textil de vanguardia</li>
+        <li><strong>Lana Pura Vergine</strong> — garantía de fibra virgen sin mezclas ni reciclados</li>
+        <li><strong>Stretch naturale</strong> — elasticidad incorporada para mayor confort sin perder estructura</li>
+      </ul>
+      <p>Tener acceso a las telas de Vitale Barberis Canonico es un privilegio reservado a los sastres más selectos del mundo. En Gilberto Ortíz e Hijos, llevamos estas telas milenarias directamente a su medida.</p>
     </div>
   </div>
 </div>
@@ -1171,15 +1220,22 @@ document.querySelectorAll('.nav-logo img, .hero-logo, .ft-logo img').forEach(img
   s.src='https://www.youtube.com/iframe_api';
   document.head.appendChild(s);
 })();
+var _ytp;
 function onYouTubeIframeAPIReady(){
-  new YT.Player('yt-player',{
+  _ytp=new YT.Player('yt-player',{
     videoId:'xMp1mhzs0iY',
+    width:'100%',height:'100%',
     playerVars:{autoplay:1,mute:1,controls:0,showinfo:0,rel:0,
-      modestbranding:1,playsinline:1,start:5,disablekb:1,fs:0,iv_load_policy:3},
+      modestbranding:1,playsinline:1,start:29,disablekb:1,fs:0,iv_load_policy:3},
     events:{
-      onReady:function(e){e.target.mute();e.target.playVideo();},
+      onReady:function(e){
+        e.target.mute();e.target.playVideo();
+        setInterval(function(){
+          try{if(_ytp.getCurrentTime()>=39){_ytp.seekTo(29);_ytp.playVideo();}}catch(x){}
+        },400);
+      },
       onStateChange:function(e){
-        if(e.data===0){e.target.seekTo(5);e.target.playVideo();}
+        if(e.data===0||e.data===2){try{_ytp.seekTo(29);_ytp.playVideo();}catch(x){}}
       }
     }
   });
