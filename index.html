@@ -44,6 +44,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 .hero-vid iframe{width:100%;height:100%;pointer-events:none;border:0;}
 #yt-player{position:absolute;top:50%;left:50%;width:200vh;height:115vh;min-width:115%;min-height:64.8vw;transform:translate(-50%,-50%);pointer-events:none;}
 .hero-vid-block{position:absolute;inset:0;z-index:2;}
+#vid-cover{position:absolute;inset:0;background:#000;z-index:5;transition:opacity 1.8s ease;pointer-events:none;}
 .hero-ov{position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.32) 55%,rgba(0,0,0,0.78) 100%);z-index:1;}
 .hero-cnt{position:relative;z-index:2;text-align:center;display:flex;flex-direction:column;align-items:center;padding:0 20px;}
 .hero-logo{height:200px;mix-blend-mode:screen;filter:drop-shadow(0 0 28px rgba(201,168,76,0.2));margin-bottom:26px;animation:fu 1.4s cubic-bezier(0.4,0,0.2,1) 0.3s both;}
@@ -364,6 +365,7 @@ footer{padding:52px 48px 24px;border-top:1px solid var(--dim);background:#000;}
     <div id="yt-player"></div>
     <div class="hero-vid-block"></div>
   </div>
+  <div id="vid-cover"></div>
   <div class="hero-ov"></div>
   <div class="hero-cr"><span class="tl"></span><span class="tr"></span><span class="bl"></span><span class="br"></span></div>
   <div class="hero-cnt">
@@ -1221,6 +1223,12 @@ document.querySelectorAll('.nav-logo img, .hero-logo, .ft-logo img').forEach(img
   document.head.appendChild(s);
 })();
 var _ytp;
+function _cover(show){
+  var c=document.getElementById('vid-cover');
+  if(!c)return;
+  if(show){c.style.opacity='1';c.style.display='block';}
+  else{c.style.opacity='0';setTimeout(function(){c.style.display='none';},1900);}
+}
 function onYouTubeIframeAPIReady(){
   _ytp=new YT.Player('yt-player',{
     videoId:'xMp1mhzs0iY',
@@ -1231,11 +1239,12 @@ function onYouTubeIframeAPIReady(){
       onReady:function(e){
         e.target.mute();e.target.playVideo();
         setInterval(function(){
-          try{if(_ytp.getCurrentTime()>=39){_ytp.seekTo(29);_ytp.playVideo();}}catch(x){}
+          try{if(_ytp.getCurrentTime()>=39){_cover(true);_ytp.seekTo(29);_ytp.playVideo();}}catch(x){}
         },400);
       },
       onStateChange:function(e){
-        if(e.data===0||e.data===2){try{_ytp.seekTo(29);_ytp.playVideo();}catch(x){}}
+        if(e.data===1){_cover(false);}
+        else if(e.data===0||e.data===2||e.data===3){_cover(true);try{_ytp.seekTo(29);_ytp.playVideo();}catch(x){}}
       }
     }
   });
