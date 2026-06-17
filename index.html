@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Gilberto Ortíz e Hijos — Sastrería de legado. Top 3 mundial Scabal. Distribuidores certificados de Scabal, Loro Piana, Holland & Sherry, AFG Esclusiva per Voi y Dormeuil en México.">
+<meta name="description" content="Gilberto Ortíz e Hijos — Sastrería de legado. Top 3 mundial Scabal. Distribuidores certificados de Scabal, Alumo, Holland & Sherry y Loro Piana en México. Sastrería a medida desde 1965.">
 <title>Gilberto Ortíz e Hijos — Sastrería de Legado</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;900&display=swap" rel="stylesheet">
@@ -36,6 +36,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 .nav-mob.open{display:flex;}
 .nav-mob a{font-family:'Cinzel',serif;font-size:12px;letter-spacing:0.4em;color:rgba(242,237,228,0.55);text-transform:uppercase;transition:color 0.3s;}
 .nav-mob a:hover{color:var(--oro);}
+.mob-cta{font-family:'Cinzel',serif;font-size:11px;letter-spacing:0.32em;text-transform:uppercase;padding:12px 32px;border:1px solid rgba(201,168,76,0.5);color:var(--oro);background:transparent;cursor:pointer;margin-top:12px;transition:var(--t);}
+.mob-cta:hover{background:var(--oro);color:#000;}
 @media(max-width:980px){nav{padding:12px 18px;}.nav-links,.nav-cta{display:none;}.nav-hbg{display:flex;}}
 
 /* HERO */
@@ -55,6 +57,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 .hero-cr .bl{bottom:72px;left:44px;border-width:0 0 1px 1px;}
 .hero-cr .br{bottom:72px;right:44px;border-width:0 1px 1px 0;}
 @media(max-width:768px){.hero-logo{height:130px;}.hero-cr{display:none;}}
+@media(max-width:768px){.hero-vid{display:none;}.hero{background:url('https://mexicanochingon.com/wp-content/uploads/2017/05/gilberto-ortiz-sastre-en-su-negocio.jpg') center/cover no-repeat;}}
 @keyframes fu{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
 
 /* MARQUEE */
@@ -149,7 +152,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 .telas-sub{text-align:center;max-width:680px;margin:0 auto 64px;font-size:17px;line-height:1.9;color:var(--texto);}
 
 /* CASAS BRANDS GRID */
-.casas-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:var(--dim);border:1px solid var(--dim);margin-bottom:80px;}
+.casas-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--dim);border:1px solid var(--dim);margin-bottom:80px;}
+.otras-casas{margin-bottom:80px;}.otras-casas-hdr{text-align:center;margin-bottom:32px;}.otras-casas-hdr h3{font-family:'Cinzel',serif;font-size:clamp(16px,2vw,22px);font-weight:600;letter-spacing:0.15em;color:var(--blanco);opacity:0.7;margin-bottom:8px;}.otras-casas-hdr p{font-size:14px;color:var(--texto);}
+.otras-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--dim);border:1px solid var(--dim);}
+@media(max-width:680px){.otras-grid{grid-template-columns:1fr;}}
 .casa{background:#000;padding:36px 24px;text-align:center;transition:var(--t);cursor:none;position:relative;}
 .casa::after{content:'';position:absolute;bottom:0;left:50%;width:0;height:2px;background:var(--oro);transition:all 0.5s;transform:translateX(-50%);}
 .casa:hover{background:#070707;}
@@ -159,8 +165,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content
 .casa-logo svg{max-height:100%;max-width:100%;}
 .casa-origen{font-family:'Cinzel',serif;font-size:7.5px;letter-spacing:0.35em;color:var(--oro);text-transform:uppercase;}
 .casa-fundacion{font-size:11px;color:var(--texto);margin-top:4px;font-style:italic;}
-@media(max-width:1200px){.casas-grid{grid-template-columns:repeat(3,1fr);}}
-@media(max-width:680px){.casas-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:860px){.casas-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.casas-grid{grid-template-columns:1fr;}}
 
 /* TARJETAS DETALLES */
 .casas-detalle{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-bottom:80px;}
@@ -338,6 +344,7 @@ footer{padding:52px 48px 24px;border-top:1px solid var(--dim);background:#000;}
   <a href="#servicios" onclick="closeMob()">Servicios</a>
   <a href="#tienda" onclick="closeMob()">Tienda</a>
   <a href="#citas" onclick="closeMob()">Reservar Cita</a>
+  <a href="#citas" class="mob-cta" onclick="closeMob()">Agendar Cita</a>
 </div>
 
 <nav>
@@ -547,41 +554,31 @@ footer{padding:52px 48px 24px;border-top:1px solid var(--dim);background:#000;}
   </div>
   <p class="telas-sub r">Trabajamos directamente con las casas de telas que definen el estándar mundial de la sastrería. Cada metro de tela que cruza nuestro taller carga siglos de tradición y la firma de los maestros tejedores más reputados de Europa.</p>
 
-  <!-- LOGOS GRID -->
+  <!-- LOGOS GRID — 4 CASAS PRINCIPALES -->
   <div class="casas-grid r">
     <div class="casa" onclick="openModal('m-scabal')">
       <div class="casa-logo"><svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg"><text x="100" y="38" text-anchor="middle" font-family="Cinzel, serif" font-size="22" font-weight="900" fill="currentColor" letter-spacing="6">SCABAL</text><text x="100" y="52" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8" fill="currentColor" letter-spacing="3" opacity="0.6">LONDON · BRUSSELS</text></svg></div>
       <div class="casa-origen">Reino Unido</div>
       <div class="casa-fundacion">Desde 1938</div>
     </div>
-    <div class="casa" onclick="openModal('m-loro')">
-      <div class="casa-logo"><svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg"><text x="110" y="32" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="22" font-style="italic" font-weight="400" fill="currentColor" letter-spacing="1">Loro Piana</text><text x="110" y="48" text-anchor="middle" font-family="Cinzel, serif" font-size="7" fill="currentColor" letter-spacing="4" opacity="0.6">QUARONA · ITALIA · 1924</text></svg></div>
-      <div class="casa-origen">Italia</div>
-      <div class="casa-fundacion">Desde 1924</div>
+    <div class="casa" onclick="openModal('m-alumo')">
+      <div class="casa-logo"><svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg"><text x="100" y="36" text-anchor="middle" font-family="Cinzel, serif" font-size="26" font-weight="900" fill="currentColor" letter-spacing="8">ALUMO</text><text x="100" y="52" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8" fill="currentColor" letter-spacing="3" opacity="0.6">HERISAU · SWITZERLAND · 1845</text></svg></div>
+      <div class="casa-origen">Suiza</div>
+      <div class="casa-fundacion">Desde 1845</div>
     </div>
     <div class="casa" onclick="openModal('m-hs')">
       <div class="casa-logo"><svg viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg"><text x="120" y="32" text-anchor="middle" font-family="Cinzel, serif" font-size="16" font-weight="600" fill="currentColor" letter-spacing="3">HOLLAND &amp; SHERRY</text><text x="120" y="48" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8" fill="currentColor" letter-spacing="3" opacity="0.6">SAVILE ROW · LONDON · 1836</text></svg></div>
       <div class="casa-origen">Reino Unido</div>
       <div class="casa-fundacion">Desde 1836</div>
     </div>
-    <div class="casa" onclick="openModal('m-afg')">
-      <div class="casa-logo"><svg viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg"><text x="120" y="28" text-anchor="middle" font-family="Cinzel, serif" font-size="20" font-weight="900" fill="currentColor" letter-spacing="6">AFG</text><text x="120" y="42" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="10" font-style="italic" fill="currentColor" letter-spacing="2">Esclusiva per Voi</text><text x="120" y="54" text-anchor="middle" font-family="Cinzel, serif" font-size="7" fill="currentColor" letter-spacing="3" opacity="0.6">ITALY</text></svg></div>
+    <div class="casa" onclick="openModal('m-loro')">
+      <div class="casa-logo"><svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg"><text x="110" y="32" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="22" font-style="italic" font-weight="400" fill="currentColor" letter-spacing="1">Loro Piana</text><text x="110" y="48" text-anchor="middle" font-family="Cinzel, serif" font-size="7" fill="currentColor" letter-spacing="4" opacity="0.6">QUARONA · ITALIA · 1924</text></svg></div>
       <div class="casa-origen">Italia</div>
-      <div class="casa-fundacion">Exclusivo</div>
-    </div>
-    <div class="casa" onclick="openModal('m-dormeuil')">
-      <div class="casa-logo"><svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg"><text x="110" y="32" text-anchor="middle" font-family="Cinzel, serif" font-size="20" font-weight="600" fill="currentColor" letter-spacing="5">DORMEUIL</text><text x="110" y="48" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8" font-style="italic" fill="currentColor" letter-spacing="3" opacity="0.6">PARIS · LONDON · 1842</text></svg></div>
-      <div class="casa-origen">Francia / Reino Unido</div>
-      <div class="casa-fundacion">Desde 1842</div>
-    </div>
-    <div class="casa" onclick="openModal('m-vitale')">
-      <div class="casa-logo"><svg viewBox="0 0 240 70" xmlns="http://www.w3.org/2000/svg"><text x="120" y="22" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic" fill="currentColor" letter-spacing="2" opacity="0.7">VITALE</text><text x="120" y="44" text-anchor="middle" font-family="Cinzel, serif" font-size="17" font-weight="900" fill="currentColor" letter-spacing="4">BARBERIS</text><text x="120" y="60" text-anchor="middle" font-family="Cinzel, serif" font-size="9" font-weight="600" fill="currentColor" letter-spacing="6">CANONICO</text></svg></div>
-      <div class="casa-origen">Italia</div>
-      <div class="casa-fundacion">Desde 1663</div>
+      <div class="casa-fundacion">Desde 1924</div>
     </div>
   </div>
 
-  <!-- TARJETAS RESUMEN -->
+  <!-- TARJETAS RESUMEN — 4 CASAS PRINCIPALES -->
   <div class="casas-detalle">
     <div class="casa-card r">
       <div class="casa-card-hdr">
@@ -590,32 +587,21 @@ footer{padding:52px 48px 24px;border-top:1px solid var(--dim);background:#000;}
       </div>
       <span class="casa-card-tag">La Casa del Legado</span>
       <h3>Scabal — el reconocimiento que cambió todo</h3>
-      <p class="casa-card-desc">La casa que coronó a Gilberto Ortíz entre los tres mejores sastres del mundo. Maestros del Huddersfield, dominan el arte de transformar fibras nobles en telas de distinción absoluta.</p>
-      <div class="casa-card-feat">
-        <span class="feat-tag gold">Super 200's</span>
-        <span class="feat-tag">Lana virgen</span>
-        <span class="feat-tag">Cashmere</span>
-        <span class="feat-tag">Savile Row</span>
-      </div>
+      <p class="casa-card-desc">La casa que coronó a Gilberto Ortíz entre los tres mejores sastres del mundo. Maestros de Huddersfield, dominan el arte de transformar fibras nobles en telas de distinción absoluta.</p>
+      <div class="casa-card-feat"><span class="feat-tag gold">Super 200's</span><span class="feat-tag">Lana virgen</span><span class="feat-tag">Cashmere</span><span class="feat-tag">Savile Row</span></div>
       <button class="casa-card-btn" onclick="openModal('m-scabal')">Leer más →</button>
     </div>
-
     <div class="casa-card r" style="transition-delay:0.08s;">
       <div class="casa-card-hdr">
-        <div class="casa-card-logo"><svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg"><text x="110" y="32" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="22" font-style="italic" font-weight="400" fill="currentColor" letter-spacing="1">Loro Piana</text><text x="110" y="48" text-anchor="middle" font-family="Cinzel, serif" font-size="7" fill="currentColor" letter-spacing="4" opacity="0.6">QUARONA · ITALIA · 1924</text></svg></div>
-        <div class="casa-card-año">Quarona · Italia</div>
+        <div class="casa-card-logo"><svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg"><text x="100" y="36" text-anchor="middle" font-family="Cinzel, serif" font-size="26" font-weight="900" fill="currentColor" letter-spacing="8">ALUMO</text><text x="100" y="52" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8" fill="currentColor" letter-spacing="3" opacity="0.6">HERISAU · SWITZERLAND · 1845</text></svg></div>
+        <div class="casa-card-año">Herisau · Suiza</div>
       </div>
-      <span class="casa-card-tag">La Cumbre del Lujo Silencioso</span>
-      <h3>Loro Piana — la realeza del cashmere y la vicuña</h3>
-      <p class="casa-card-desc">Casa italiana fundada en 1924, referente mundial del "quiet luxury". Únicos en obtener derechos exclusivos para procesar vicuña — la fibra más rara del planeta — directamente de los Andes.</p>
-      <div class="casa-card-feat">
-        <span class="feat-tag gold">Vicuña</span>
-        <span class="feat-tag">Baby Cashmere</span>
-        <span class="feat-tag">Lana Merino extrafina</span>
-      </div>
-      <button class="casa-card-btn" onclick="openModal('m-loro')">Leer más →</button>
+      <span class="casa-card-tag">El Algodón Suizo Perfecto</span>
+      <h3>Alumo — camisería de élite desde los Alpes suizos</h3>
+      <p class="casa-card-desc">Fundada en 1845 en Herisau, Suiza. Referente mundial absoluto en telas para camisería de lujo. Sus algodones egipcios e italianos, tejidos con precisión suiza, son la elección de las mejores camiserías del mundo.</p>
+      <div class="casa-card-feat"><span class="feat-tag gold">Algodón egipcio</span><span class="feat-tag">Popelín suizo</span><span class="feat-tag">Twill premium</span><span class="feat-tag">180+ hilos</span></div>
+      <button class="casa-card-btn" onclick="openModal('m-alumo')">Leer más →</button>
     </div>
-
     <div class="casa-card r" style="transition-delay:0.16s;">
       <div class="casa-card-hdr">
         <div class="casa-card-logo"><svg viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg"><text x="120" y="32" text-anchor="middle" font-family="Cinzel, serif" font-size="16" font-weight="600" fill="currentColor" letter-spacing="3">HOLLAND &amp; SHERRY</text><text x="120" y="48" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8" fill="currentColor" letter-spacing="3" opacity="0.6">SAVILE ROW · LONDON · 1836</text></svg></div>
@@ -623,72 +609,43 @@ footer{padding:52px 48px 24px;border-top:1px solid var(--dim);background:#000;}
       </div>
       <span class="casa-card-tag">La Tradición Inglesa</span>
       <h3>Holland &amp; Sherry — casi 200 años en Savile Row</h3>
-      <p class="casa-card-desc">Fundada en 1836 por Stephen Holland y Frederick Sherry. La última casa de mercaderes de Golden Square aún en operación. Proveedor predilecto de los sastres más exclusivos de Londres.</p>
-      <div class="casa-card-feat">
-        <span class="feat-tag gold">Super 200's con cashmere</span>
-        <span class="feat-tag">Vicuña pura</span>
-        <span class="feat-tag">Tweeds escoceses</span>
-      </div>
+      <p class="casa-card-desc">Fundada en 1836. La última casa de mercaderes de Golden Square aún en operación. Proveedor predilecto de los sastres más exclusivos de Londres y referente de la sastrería mundial.</p>
+      <div class="casa-card-feat"><span class="feat-tag gold">Super 200's cashmere</span><span class="feat-tag">Vicuña pura</span><span class="feat-tag">Tweeds escoceses</span></div>
       <button class="casa-card-btn" onclick="openModal('m-hs')">Leer más →</button>
     </div>
-
     <div class="casa-card r" style="transition-delay:0.24s;">
       <div class="casa-card-hdr">
-        <div class="casa-card-logo"><svg viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg"><text x="120" y="28" text-anchor="middle" font-family="Cinzel, serif" font-size="20" font-weight="900" fill="currentColor" letter-spacing="6">AFG</text><text x="120" y="42" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="10" font-style="italic" fill="currentColor" letter-spacing="2">Esclusiva per Voi</text><text x="120" y="54" text-anchor="middle" font-family="Cinzel, serif" font-size="7" fill="currentColor" letter-spacing="3" opacity="0.6">ITALY</text></svg></div>
-        <div class="casa-card-año">Italia · Exclusivo</div>
+        <div class="casa-card-logo"><svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg"><text x="110" y="32" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="22" font-style="italic" font-weight="400" fill="currentColor" letter-spacing="1">Loro Piana</text><text x="110" y="48" text-anchor="middle" font-family="Cinzel, serif" font-size="7" fill="currentColor" letter-spacing="4" opacity="0.6">QUARONA · ITALIA · 1924</text></svg></div>
+        <div class="casa-card-año">Quarona · Italia</div>
       </div>
-      <span class="casa-card-tag">La Exclusividad Italiana</span>
-      <h3>AFG Esclusiva per Voi — refinamiento italiano hecho a la medida</h3>
-      <p class="casa-card-desc">Colecciones exclusivas italianas que definen lo selecto del refinamiento mediterráneo. Telas diseñadas exclusivamente para quienes buscan distinción sin concesiones.</p>
-      <div class="casa-card-feat">
-        <span class="feat-tag gold">Italia 100%</span>
-        <span class="feat-tag">Colecciones exclusivas</span>
-        <span class="feat-tag">Camisería premium</span>
-      </div>
-      <button class="casa-card-btn" onclick="openModal('m-afg')">Leer más →</button>
+      <span class="casa-card-tag">La Cumbre del Lujo Silencioso</span>
+      <h3>Loro Piana — la realeza del cashmere y la vicuña</h3>
+      <p class="casa-card-desc">Casa italiana fundada en 1924, referente mundial del "quiet luxury". Únicos con derechos exclusivos para procesar vicuña — la fibra más rara del planeta — directamente de los Andes peruanos.</p>
+      <div class="casa-card-feat"><span class="feat-tag gold">Vicuña</span><span class="feat-tag">Baby Cashmere</span><span class="feat-tag">Merino extrafino</span></div>
+      <button class="casa-card-btn" onclick="openModal('m-loro')">Leer más →</button>
     </div>
+  </div>
 
-    <div class="casa-card r" style="transition-delay:0.32s;">
-      <div class="casa-card-hdr">
-        <div class="casa-card-logo"><svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg"><text x="110" y="32" text-anchor="middle" font-family="Cinzel, serif" font-size="20" font-weight="600" fill="currentColor" letter-spacing="5">DORMEUIL</text><text x="110" y="48" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8" font-style="italic" fill="currentColor" letter-spacing="3" opacity="0.6">PARIS · LONDON · 1842</text></svg></div>
-        <div class="casa-card-año">París · Londres · 1842</div>
-      </div>
-      <span class="casa-card-tag">El Encuentro Franco-Británico</span>
-      <h3>Dormeuil — 180 años vistiendo reyes y leyendas</h3>
-      <p class="casa-card-desc">Fundada en 1842 por Jules Dormeuil. Casa francesa con tejido en Yorkshire, Inglaterra. Ha vestido a reyes, presidentes y leyendas del cine. Su colección Ambassador es el único Super 180's del mundo con estructura two-ply.</p>
-      <div class="casa-card-feat">
-        <span class="feat-tag gold">Ambassador Super 180's</span>
-        <span class="feat-tag">Vicuña Extreme</span>
-        <span class="feat-tag">Tonik · Sportex</span>
-      </div>
-      <button class="casa-card-btn" onclick="openModal('m-dormeuil')">Leer más →</button>
+  <!-- OTRAS CASAS -->
+  <div class="otras-casas r">
+    <div class="otras-casas-hdr">
+      <span class="ey">También trabajamos con</span>
+      <h3>Otras casas de prestigio mundial</h3>
+      <p>Distribuidores certificados de las siguientes casas de tela de alta sastrería.</p>
     </div>
-
-    <div class="casa-card r" style="transition-delay:0.36s;">
-      <div class="casa-card-hdr">
-        <div class="casa-card-logo"><svg viewBox="0 0 240 70" xmlns="http://www.w3.org/2000/svg"><text x="120" y="20" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="10" font-style="italic" fill="currentColor" letter-spacing="2" opacity="0.7">VITALE</text><text x="120" y="42" text-anchor="middle" font-family="Cinzel, serif" font-size="16" font-weight="900" fill="currentColor" letter-spacing="4">BARBERIS</text><text x="120" y="58" text-anchor="middle" font-family="Cinzel, serif" font-size="8" font-weight="600" fill="currentColor" letter-spacing="6">CANONICO</text></svg></div>
-        <div class="casa-card-año">Trivero · Italia · 1663</div>
+    <div class="otras-grid">
+      <div class="casa" onclick="openModal('m-afg')" style="padding:28px 20px;">
+        <div class="casa-logo"><svg viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg"><text x="120" y="28" text-anchor="middle" font-family="Cinzel, serif" font-size="20" font-weight="900" fill="currentColor" letter-spacing="6">AFG</text><text x="120" y="42" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="10" font-style="italic" fill="currentColor" letter-spacing="2">Esclusiva per Voi</text><text x="120" y="54" text-anchor="middle" font-family="Cinzel, serif" font-size="7" fill="currentColor" letter-spacing="3" opacity="0.6">ITALY</text></svg></div>
+        <div class="casa-origen">Italia</div><div class="casa-fundacion">Exclusivo</div>
       </div>
-      <span class="casa-card-tag">El Tejido más Antiguo del Mundo</span>
-      <h3>Vitale Barberis Canonico — 360 años de lana pura italiana</h3>
-      <p class="casa-card-desc">Fundada en 1663 en Trivero, Italia, es el lanificio más antiguo del mundo en operación continua. Sus telas en lana pura y merino son referente absoluto de la alta sastrería italiana: equilibrio perfecto entre tradición artesanal e innovación técnica.</p>
-      <div class="casa-card-feat">
-        <span class="feat-tag gold">Lanificio desde 1663</span>
-        <span class="feat-tag">Merino extra-fine</span>
-        <span class="feat-tag">Lana pura italiana</span>
+      <div class="casa" onclick="openModal('m-dormeuil')" style="padding:28px 20px;">
+        <div class="casa-logo"><svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg"><text x="110" y="32" text-anchor="middle" font-family="Cinzel, serif" font-size="20" font-weight="600" fill="currentColor" letter-spacing="5">DORMEUIL</text><text x="110" y="48" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8" font-style="italic" fill="currentColor" letter-spacing="3" opacity="0.6">PARIS · LONDON · 1842</text></svg></div>
+        <div class="casa-origen">Francia / Reino Unido</div><div class="casa-fundacion">Desde 1842</div>
       </div>
-      <button class="casa-card-btn" onclick="openModal('m-vitale')">Leer más →</button>
-    </div>
-
-    <div class="casa-card r" style="transition-delay:0.4s;background:linear-gradient(135deg,#0a0a0a,#000);">
-      <div class="casa-card-hdr" style="border-bottom-color:rgba(201,168,76,0.25);">
-        <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:var(--oro);">✦</div>
-        <div class="casa-card-año">Asesoría Personalizada</div>
+      <div class="casa" onclick="openModal('m-vitale')" style="padding:28px 20px;">
+        <div class="casa-logo"><svg viewBox="0 0 240 70" xmlns="http://www.w3.org/2000/svg"><text x="120" y="22" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="11" font-style="italic" fill="currentColor" letter-spacing="2" opacity="0.7">VITALE</text><text x="120" y="44" text-anchor="middle" font-family="Cinzel, serif" font-size="17" font-weight="900" fill="currentColor" letter-spacing="4">BARBERIS</text><text x="120" y="60" text-anchor="middle" font-family="Cinzel, serif" font-size="9" font-weight="600" fill="currentColor" letter-spacing="6">CANONICO</text></svg></div>
+        <div class="casa-origen">Italia</div><div class="casa-fundacion">Desde 1663</div>
       </div>
-      <span class="casa-card-tag">¿No sabes cuál elegir?</span>
-      <h3>Permítenos guiarte hacia la tela perfecta</h3>
-      <p class="casa-card-desc">Cada tela cuenta una historia diferente. Nuestro equipo te asesora para encontrar la que mejor refleje tu estilo, ocasión y carácter — exactamente como lo haría el maestro Gilberto.</p>
-      <button class="casa-card-btn" onclick="document.getElementById('citas').scrollIntoView({behavior:'smooth'})" style="margin-top:8px;">Agendar Asesoría →</button>
     </div>
   </div>
 
@@ -727,6 +684,30 @@ footer{padding:52px 48px 24px;border-top:1px solid var(--dim);background:#000;}
 </section>
 
 <!-- MODALES -->
+<div class="modal" id="m-alumo">
+  <div class="modal-bx">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-hero">
+      <div class="modal-logo"><svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg"><text x="100" y="36" text-anchor="middle" font-family="Cinzel, serif" font-size="26" font-weight="900" fill="currentColor" letter-spacing="8">ALUMO</text><text x="100" y="52" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="8" fill="currentColor" letter-spacing="3" opacity="0.6">HERISAU · SWITZERLAND · 1845</text></svg></div>
+      <div class="modal-meta"><span>Herisau · Suiza</span><span>Fundada en 1845</span><span>Camisería de Élite</span></div>
+      <h2 class="hl">Alumo — la precisión <em>suiza</em> aplicada al algodón</h2>
+    </div>
+    <div class="modal-body">
+      <p>Fundada en <strong>1845 en Herisau, Appenzell, Suiza</strong>, Alumo es el referente mundial indiscutible en telas para camisería de alta sastrería. Con más de 175 años tejiendo algodones de la más alta calidad, sus telas son la elección de las mejores camiserías del mundo, desde Jermyn Street en Londres hasta las boutiques más exclusivas de Milán.</p>
+      <p>Alumo trabaja exclusivamente con <strong>algodones de origen certificado</strong>: egipcio, sudafricano e italiano. Cada tela pasa por un proceso de acabado propio que garantiza un tacto inigualable, colores que no desteñen y una durabilidad excepcional — características que solo la precisión suiza puede garantizar.</p>
+      <h4>Especialidades</h4>
+      <ul>
+        <li><strong>Popelín suizo</strong> — el estándar de oro para camisería formal de primera clase</li>
+        <li><strong>Twill premium</strong> — caída perfecta y textura sedosa para camisa de uso diario de lujo</li>
+        <li><strong>Algodón egipcio de 2 cabos</strong> — hilatura doble para mayor resistencia y brillo natural</li>
+        <li><strong>Colecciones Riva y Teseo</strong> — líneas exclusivas con más de 800 diseños por temporada</li>
+        <li><strong>Acabados antimanchas y fácil planchado</strong> — tecnología suiza sin sacrificar el tacto natural</li>
+      </ul>
+      <p>En Gilberto Ortíz e Hijos confeccionamos camisas a medida con telas Alumo para clientes que exigen lo mejor en camisería de lujo. Una camisa Alumo es una inversión en elegancia que se siente desde el primer uso.</p>
+    </div>
+  </div>
+</div>
+
 <div class="modal" id="m-scabal">
   <div class="modal-bx">
     <button class="modal-close" onclick="closeModal()">✕</button>
