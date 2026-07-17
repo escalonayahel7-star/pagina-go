@@ -313,6 +313,17 @@ nav.nav-solid{background:rgba(0,0,0,0.94);backdrop-filter:blur(20px);-webkit-bac
 @media(max-width:1000px){.prod-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:520px){.prod-grid{grid-template-columns:1fr 1fr;gap:10px;}.tienda-cfg{flex-direction:column;text-align:center;padding:24px 18px;}}
 
+/* CTA BLOQUES */
+.cta-bloque{text-align:center;padding:72px 48px;background:#000;border-top:1px solid var(--dim);border-bottom:1px solid var(--dim);position:relative;}
+.cta-bloque::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(to right,transparent,rgba(201,168,76,0.4),transparent);}
+.cta-bloque-dark{background:var(--gris1);}
+.cta-bloque-sub{font-family:'Cormorant Garamond',serif;font-size:clamp(18px,2vw,26px);font-style:italic;color:rgba(242,237,228,0.55);margin-bottom:32px;letter-spacing:0.04em;}
+.cta-gold-btn{display:inline-block;font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:0.5em;text-transform:uppercase;color:#000;background:var(--oro);padding:16px 52px;transition:var(--t);position:relative;}
+.cta-gold-btn::after{content:'';position:absolute;inset:-4px;border:1px solid rgba(201,168,76,0.3);transition:var(--t);}
+.cta-gold-btn:hover{background:var(--oro-s);transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,168,76,0.25);}
+.cta-gold-btn:hover::after{inset:-7px;opacity:0;}
+@media(max-width:768px){.cta-bloque{padding:52px 24px;}.cta-gold-btn{padding:14px 36px;font-size:9px;}}
+
 /* CITAS */
 .citas-s{background:var(--gris1);}
 .citas-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
@@ -385,8 +396,6 @@ footer{padding:52px 48px 24px;border-top:1px solid var(--dim);background:#000;}
     <li><a href="#tienda">Tienda</a></li>
     <li><a href="#citas">Reservar</a></li>
   </ul>
-  <a href="#citas" class="nav-cta">Agendar Cita</a>
-  <a href="#citas" class="mob-nav-cta">◆ Agendar Cita</a>
   <button class="nav-hbg" id="hbg" aria-label="Menú"><span></span><span></span><span></span></button>
 </nav>
 
@@ -417,6 +426,11 @@ footer{padding:52px 48px 24px;border-top:1px solid var(--dim);background:#000;}
 </div>
 
 <!-- LEGADO -->
+<div class="foto-full-wrap r">
+  <img class="foto-full" src="https://mexicanochingon.com/wp-content/uploads/2017/05/gilberto-ortiz-sastre-en-su-negocio.jpg" alt="Gilberto Ortíz en su sastrería" loading="lazy">
+  <div class="foto-full-cap"><p>Gilberto Ortíz Osorio en su taller — décadas de oficio, una sola filosofía.</p></div>
+</div>
+
 <section class="s" id="legado" style="background:#000;">
   <div class="legado-grid">
     <div class="r">
@@ -441,9 +455,10 @@ footer{padding:52px 48px 24px;border-top:1px solid var(--dim);background:#000;}
   </div>
 </section>
 
-<div class="foto-full-wrap r">
-  <img class="foto-full" src="https://mexicanochingon.com/wp-content/uploads/2017/05/gilberto-ortiz-sastre-en-su-negocio.jpg" alt="Gilberto Ortíz en su sastrería" loading="lazy">
-  <div class="foto-full-cap"><p>Gilberto Ortíz Osorio en su taller — décadas de oficio, una sola filosofía.</p></div>
+<!-- CTA 1 — tras legado -->
+<div class="cta-bloque r">
+  <p class="cta-bloque-sub">Cada traje, una obra singular</p>
+  <a href="#citas" class="cta-gold-btn">Agendar Consulta Gratuita</a>
 </div>
 
 <!-- SCABAL BANNER -->
@@ -537,13 +552,6 @@ footer{padding:52px 48px 24px;border-top:1px solid var(--dim);background:#000;}
     </div>
   </div>
 
-  <div class="tienda-cfg r">
-    <div>
-      <h3>Diseña tu Camisa <em style="color:var(--oro);font-style:italic;">a la Medida</em></h3>
-      <p>Tela, cuello, puños y medidas — visualiza tu camisa en tiempo real.</p>
-    </div>
-    <button class="btn-oro" onclick="window.open('configurador-camisa.html','_blank')">Iniciar Configurador →</button>
-  </div>
 </section>
 
 <div class="foto-full-wrap r">
@@ -929,6 +937,12 @@ footer{padding:52px 48px 24px;border-top:1px solid var(--dim);background:#000;}
     <span class="cli star">Un ex-presidente de México</span>
   </div>
 </section>
+
+<!-- CTA 2 — mitad de página -->
+<div class="cta-bloque cta-bloque-dark r">
+  <p class="cta-bloque-sub">Un traje hecho para ti, con las mejores telas del mundo</p>
+  <a href="#citas" class="cta-gold-btn">Reservar mi Cita</a>
+</div>
 
 <!-- SERVICIOS -->
 <section class="s svc-s" id="servicios">
