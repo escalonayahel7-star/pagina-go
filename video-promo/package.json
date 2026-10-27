@@ -1,0 +1,25 @@
+{
+  "name": "goh-promo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Video de presentación de gilbertoortizehijos.com (Remotion)",
+  "scripts": {
+    "dev": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts GOHPromo out/goh-promo-vertical.mp4",
+    "render:square": "remotion render src/index.ts GOHPromoSquare out/goh-promo-cuadrado.mp4",
+    "render:wide": "remotion render src/index.ts GOHPromoWide out/goh-promo-horizontal.mp4",
+    "render:all": "npm run render && npm run render:square && npm run render:wide"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.539",
+    "@remotion/fonts": "4.0.539",
+    "@remotion/transitions": "^4.0.539",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.539"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.31",
+    "typescript": "^7.0.2"
+  }
+}
