@@ -74,6 +74,13 @@ Para contenido nuevo, fotografiar a la máxima resolución del celular.
 | Portada de Reel | 1080×1920, con el título dentro del recuadro central 1080×1440 |
 | YouTube / página | 1920×1080 (16:9) |
 
+## Plantilla de carrusel
+`contenido/2026-10-29-telas-para-el-frio/` es la plantilla de carrusel 4:5: `carrusel.html` (portada con foto a
+sangre y marco, láminas con foto arriba y texto abajo, lámina de dato y cierre con botón) y `render.js`,
+que exporta un PNG 1080×1350 por lámina y un PDF. Para uno nuevo: copiar la carpeta, cambiar textos e
+imágenes y correr `node render.js`. Fotos externas solo de Pexels (licencia libre, uso comercial), sin
+presentar a las personas como clientes; anotar la fuente de cada foto en el `LEEME.md` de la carpeta.
+
 ## Plantilla de producción
 El proyecto `video-promo/` (Remotion) ya tiene todas estas piezas: marco, líneas, brillo, Ken Burns,
 grano, tipografías y efectos de sonido. Para un video nuevo se parte de ahí: textos y tiempos en
